@@ -7,57 +7,75 @@
     <title>Document</title>
     <link href="/css/tailwind.css" rel="stylesheet" />
   </head>
-  <body class="bg-yellow-900 bg-opacity-10">
+  <body class="bg-warmGray-200">
     <header
-      class="bg-blue-700 bg-opacity-70 text-white flex-row flex justify-between py-4 px-10"
+      class="bg-lightBlue-600 text-white flex-row flex justify-between py-7 px-10"
     >
-      <h1 class="text-4xl font-light text">
-        Road to <span class="font-semibold">mastery</span>
+      <h1 class="text-4xl font-light leading-8">
+        Road to <span class="font-semibold">Mastery</span>
       </h1>
-      <nav class="flex items-center">
+      <nav class="hidden sm:flex items-center font-light">
         <ul class="flex gap-4">
-          <li>Blog</li>
-          <li>About</li>
-          <li class="">Contact</li>
-          <li>Subscribe</li>
+          <li>
+            <a href="#" class="hover:text-orange-400 transition font-bold"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-orange-400 transition">About</a>
+          </li>
+          <li class="">
+            <a href="#" class="hover:text-orange-400 transition">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-orange-400 transition">Subscribe</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <div class="flex flex-row my-14 gap-10">
-      <main class="mx-auto">
+    <div
+      class="flex my-14 gap-10 max-w-7xl mx-auto flex-col md:flex-row px-5 md:px-20"
+    >
+      <main>
         <article class="bg-white py-14 px-12 shadow-xl rounded max-w-3xl">
-          <h2 class="text-blue-700 text-opacity-70 font-bold text-2xl">
-            elso titlem ez jo hosszu cimmel, ami csak tobb sorba fer majd ki
+          <h2 class="text-lightBlue-600 font-bold text-2xl mb-4">
+            <a href="#" class="hover:text-orange-500 transition"
+              >elso titlem ez jo hosszu cimmel, ami csak tobb sorba fer majd
+              ki</a
+            >
           </h2>
-          <ul>
-            <li>
+
+          <ul class="flex items-center flex-col sm:flex-row sm:gap-3">
+            <li class="flex items-center gap-3">
               <img
                 src="https://secure.gravatar.com/avatar/1e51f656f582d50ba4643714aed40314?s=96&d=mm&r=g"
                 alt=""
+                class="rounded-full w-9"
               />
               David Hargitai
             </li>
             <li>Updated on February 18, 2021</li>
           </ul>
 
-          <div class="">
-            <div class="">
-              <img
-                width="300"
-                height="300"
-                src="https://growthbadger.com/wp-content/uploads/Content-Marketing-Examples-and-Ideas-300x300.jpg"
-                class=""
-                alt=""
-                loading="lazy"
-                srcset="
-                  https://growthbadger.com/wp-content/uploads/Content-Marketing-Examples-and-Ideas-300x300.jpg 300w
-                "
-                sizes="(max-width: 300px) 100vw, 300px"
-              />
-            </div>
-            <div class="">
-              <div class="">
+          <div class="mt-11">
+            <div class="text-xl line leading-8">
+              <div class="float-right w-28 mb-7 ml-2 sm:w-48 md:w-32 lg:w-48">
+                <img
+                  class="w-full"
+                  width="300"
+                  height="300"
+                  src="https://growthbadger.com/wp-content/uploads/Content-Marketing-Examples-and-Ideas-300x300.jpg"
+                  alt=""
+                  loading="lazy"
+                  srcset="
+                    https://growthbadger.com/wp-content/uploads/Content-Marketing-Examples-and-Ideas-300x300.jpg 300w
+                  "
+                  sizes="(max-width: 300px) 100vw, 300px"
+                />
+              </div>
+
+              <div class="space-y-4">
                 <p>Content marketing is incredibly powerful.</p>
                 <p>
                   But one of the hardest parts is coming up with a good idea
@@ -73,37 +91,97 @@
                   and get ideas to inspire your own content.
                 </p>
               </div>
+              bg-yellow-500 bg-opacity-80
               <a
-                href="https://growthbadger.com/resources/content-marketing-examples/"
-                class=""
+                href="post.html"
+                class="bg-orange-500 text-white w-full block py-2 mt-6 text-center hover:bg-orange-600 focus:shadow-inner relative rounded transition"
                 >Continue reading</a
               >
             </div>
           </div>
         </article>
+
+        <section
+          class="flex flex-row justify-between text-lightBlue-600 text-xl mt-3"
+        >
+          <a href="#" class="hover:text-orange-500 transition">Older posts</a>
+          <a href="#" class="hover:text-orange-500 transition">Newer posts</a>
+        </section>
       </main>
 
       <aside>
-        <div class="">
-          <div class="">Content marketing that increases your conversions.</div>
-          <div class="">
+        <div
+          class="rounded bg-lightBlue-600 text-white w-full md:w-52 lg:w-72 xl:w-96 px-10 py-6 text-center space-y-3 text-xl font-thin tracking-wide"
+        >
+          <div
+            class="text-3xl leading-8 md:text-2xl md:leading-6 lg:text-3xl lg:leading-8 font-bold"
+          >
+            Content marketing that increases your conversions.
+          </div>
+          <div class="tracking-wider">
             Get my latest content marketing techniques sent to your inbox, plus
             exclusive tips not shared on this blog.
           </div>
-          <form class="" action="" method="post">
+          <form
+            class="bg-white rounded p-1 flex flex-col"
+            action=""
+            method="post"
+          >
             <div class="">
               <input
                 type="email"
-                class=""
+                class="block w-full text-center focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-300 mb-1 text-gray-900 text-base py-3 rounded bg-gray-50"
                 name="fields[email]"
                 placeholder="Enter your email"
                 value=""
               />
-              <input type="submit" value="Sign Up" />
+              <button
+                type="submit"
+                class="block bg-orange-500 text-white w-full text-center transition hover:bg-orange-600 focus:shadow-inner focus:outline-none text-base py-3 rounded"
+              >
+                Sign Up
+              </button>
             </div>
           </form>
         </div>
       </aside>
     </div>
+
+    <footer
+      class="bg-lightBlue-600 text-white flex flex-col text-center border-t border-white"
+    >
+      <div class="max-w-4xl mx-auto">
+        <span class="text-4xl font-light text mt-4 block">
+          Road to <span class="font-semibold">mastery</span>
+        </span>
+        <nav class="flex items-center mt-7 mb-10 text-xl tracking-wide">
+          <ul class="flex gap-4">
+            <li class="font-bold">
+              <a href="#" class="hover:text-orange-400 transition">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">About</a>
+            </li>
+            <li class="">
+              <a href="#" class="hover:text-orange-400 transition">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Subscribe</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="bg-lightBlue-700">
+        <div class="max-w-4xl mx-auto my-5 space-y-4 text-sm font-light">
+          <p>
+            <a href="#" class="hover:text-orange-400 transition"
+              >Terms of Service, Privacy Policy and Cookies Policy</a
+            >
+          </p>
+          <p>Copyright © GrowthBadger 2021. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
